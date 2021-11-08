@@ -1,0 +1,42 @@
+<h5 style="text-align: center;">Forecast at Los Angeles, Los Angeles Country</h5>      
+<!-- 收藏btn -->
+<div class="pt-4 pb-3">
+  <div class="float-right">
+    <button type="button" class="btn btn-outline-dark">
+      <i class="bi bi-star"></i>
+      <i class="bi bi-star-fill" style="color:#fadc0b; display: none;"></i>
+    </button>
+    <span class="align-middle" style="color: gray;">&nbsp;&nbsp; Details <i class="bi bi-chevron-right"></i></span>
+  </div>
+</div>
+<!-- Rst -->
+<div class="container-fluid">
+  <!-- Nav tabs -->
+  <div class="container-fluid pt-5">
+    <ul class="nav nav-tabs justify-content-end" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#dayview">Day View</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tmpchart">Daily Temp. Chart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#meteogram">Meteogram</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Tab panes -->
+  <div class="tab-content" style="margin-top: -13px;">
+    <div id="dayview" class="container-fluid tab-pane active"><br>
+      <app-weather-list></app-weather-list>
+    </div>
+    <div id="tmpchart" class="container-fluid tab-pane fade"><br>
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="meteogram" class="container-fluid tab-pane fade"><br>
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
+</div>

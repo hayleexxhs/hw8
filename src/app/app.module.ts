@@ -3,13 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
-import { ContentComponent } from './content/content.component';
+import { ResultsPageComponent } from './results-page/results-page.component';
+import { WeatherListComponent } from './weather-list/weather-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchbarComponent,
-    ContentComponent
+    ResultsPageComponent,
+    WeatherListComponent
   ],
   imports: [
     BrowserModule

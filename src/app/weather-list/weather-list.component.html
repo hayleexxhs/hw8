@@ -1,0 +1,25 @@
+<table class="table" style="text-align: center;">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Temp. High (° F)</th>
+            <th>Temp. Low (° F)</th>
+            <th>Wind Speed (mph)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let weather of weathers">
+            <td class="align-middle font-weight-bold">{{weather.id}}</td>
+            <td class="align-middle"><a href="#" style="text-decoration: underline;">{{weather.date}}</a></td>
+            <td class="align-middle">
+              <img style="height:36px; width:36px;" src="{{weather.statusimg}}">
+              <span class="align-middle"> {{weather.status}}</span>
+            </td>
+            <td class="align-middle">{{weather.temphigh}}</td>
+            <td class="align-middle">{{weather.templow}}</td>
+            <td class="align-middle">{{weather.windspeed}}</td>
+        </tr>
+    </tbody>    
+</table>

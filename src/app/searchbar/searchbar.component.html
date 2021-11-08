@@ -1,3 +1,4 @@
+<!-- Search Bar -->
 <div class="container-fluid">
     <div class="card" style="background-color: #f3f3f3">
         <div class="card-body">
@@ -121,5 +122,39 @@
                 </div>
             </form>
         </div>
+    </div>
+</div>
+
+<!-- Resutls/Favorites Nav -->
+<div class="container-fluid pt-4 pb-4">
+    <ul class="nav nav-pills justify-content-center" role="tablist">
+      <li class="nav-item pr-2">
+        <a class="nav-link active" data-toggle="pill" href="#results">Results</a>
+      </li>
+      <li class="nav-item pl-2">
+        <a class="nav-link" data-toggle="pill" href="#favorites">Favorites</a>
+      </li>        
+    </ul>  
+</div>
+  
+<!-- Progress Bar 进度条 -->
+<div class="container-fluid pt-5" style="display:none;">
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%"></div>
+    </div>
+</div>
+
+
+<!-- Content -->
+<div class="container-fluid">
+    <div class="tab-content">
+      <!-- Results Page -->
+      <div id="results" class="container-fluid tab-pane active"><br>
+        <app-results-page></app-results-page>
+      </div>
+      <div id="favorites" class="container-fluid tab-pane fade"><br>
+        <h3>Menu 1</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
     </div>
 </div>
