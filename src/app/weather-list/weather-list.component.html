@@ -10,8 +10,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let weather of weathers">
-            <td class="align-middle font-weight-bold">{{weather.id}}</td>
+        <tr *ngFor="let weather of weather_15; let id = index;">
+            <td class="align-middle font-weight-bold">{{id + 1}}</td>
             <td class="align-middle"><a href="#" style="text-decoration: underline;">{{weather.date}}</a></td>
             <td class="align-middle">
               <img style="height:36px; width:36px;" src="{{weather.statusimg}}">

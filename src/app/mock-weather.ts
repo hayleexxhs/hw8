@@ -1,6 +1,6 @@
 import { Weather } from './weather';
 
-export const  WEATHERS: Weather[] = [
+export const  WEATHERS: any[] = [
     {
         id: 1,
         date: "Wednesday, 06 Oct 2021",

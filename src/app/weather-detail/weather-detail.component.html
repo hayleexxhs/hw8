@@ -1,0 +1,75 @@
+<div class="container-fluid pt-3" id="detail">
+    <div class="row p-3">
+        <div class="col-sm-3">
+            <button type="button" class="btn btn-outline-dark">
+                <i class="bi bi-chevron-left"></i> List
+            </button>
+        </div>
+        <div class="col-sm-6">
+            <h5 class="align-middle" style="text-align: center;">{{weather.date}}</h5>
+        </div>
+        <div class="col-sm-3">
+            <a href="https://twitter.com/intent/tweet?text=The temperature in {{c_weather.location}} on {{weather.date}} is {{c_weather.temp}} °F. The weather conditions are {{c_weather.status}}%20&hashtags=CSCI571WeatherSearch">
+                <button type="button" class="btn btn-outline-dark float-right">
+                    <i class="bi bi-twitter"></i>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-3">     
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Status</td>
+                    <td>{{c_weather.status}}</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Max Temperature</td>
+                    <td>{{weather.temphigh}} °F</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Min Temperature</td>
+                    <td>{{weather.templow}} °F</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Apparent Temperature</td>
+                    <td>{{c_weather.temp}} °F</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Sun Rise Time</td>
+                    <td>{{weather.sunrise}}</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Sun Set Time</td>
+                    <td>{{weather.sunset}}</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Humidity</td>
+                    <td>{{c_weather.humidity}}%</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Wind Speed</td>
+                    <td>{{c_weather.windspeed}} mph</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Visibility</td>
+                    <td>{{c_weather.visibility}} mi</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold col-sm-4">Cloud Cover</td>
+                    <td>{{c_weather.cloudcover}}%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!--The div element for the map -->
+    <div class="container p-3" id="map"></div>   
+    
+
+</div>
+
+
+

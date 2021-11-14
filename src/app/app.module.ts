@@ -7,16 +7,21 @@ import { ResultsPageComponent } from './results-page/results-page.component';
 import { WeatherListComponent } from './weather-list/weather-list.component';
 import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchbarComponent,
     ResultsPageComponent,
     WeatherListComponent,
-    FavoritesPageComponent
+    FavoritesPageComponent,
+    WeatherDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

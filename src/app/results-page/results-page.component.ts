@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherService } from '../weather.service';
+import { Weather, CurrentWeather } from '../weather';
 
 @Component({
   selector: 'app-results-page',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./results-page.component.css']
 })
 export class ResultsPageComponent implements OnInit {
+  public location:any;
 
-  constructor() { }
+  constructor(private weatherService: WeatherService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    this.location = this.weatherService.weather_c.location;
   }
 
 }
