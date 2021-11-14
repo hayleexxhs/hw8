@@ -9,6 +9,7 @@ import { FavoritesPageComponent } from './favorites-page/favorites-page.componen
 
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { WeatherDetailComponent } from './weather-detail/weather-detail.componen
   imports: [
     BrowserModule,
     HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

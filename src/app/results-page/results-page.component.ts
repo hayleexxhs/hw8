@@ -9,11 +9,16 @@ import { Weather, CurrentWeather } from '../weather';
 })
 export class ResultsPageComponent implements OnInit {
   public location:any;
+  liked: boolean = false;
 
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {    
     this.location = this.weatherService.weather_c.location;
+  }
+
+  likedLocation(): void {
+    this.liked = !this.liked;
   }
 
 }

@@ -129,10 +129,10 @@
 <div class="container-fluid pt-4 pb-4">
     <ul class="nav nav-pills justify-content-center" role="tablist">
       <li class="nav-item pr-2">
-        <a class="nav-link active" data-toggle="pill" href="#results">Results</a>
+        <a class="nav-link active" data-toggle="pill" routerLink="/results">Results</a>
       </li>
       <li class="nav-item pl-2">
-        <a class="nav-link" data-toggle="pill" href="#favorites">Favorites</a>
+        <a class="nav-link" data-toggle="pill" routerLink="/favorites">Favorites</a>
       </li>        
     </ul>  
 </div>
@@ -146,17 +146,17 @@
 
 
 <!-- Content -->
-<app-weather-detail></app-weather-detail>
 
-<div class="container-fluid">
-    <div class="tab-content">
-      <!-- Results Page -->
-      <div id="results" class="container-fluid tab-pane active"><br>
-        <app-results-page></app-results-page>
-      </div>
-      <!-- Favorites Page -->
-      <div id="favorites" class="container-fluid tab-pane fade"><br>
-        <app-favorites-page></app-favorites-page>
-      </div>
-    </div>
-</div>
+<router-outlet></router-outlet>
+    
+    <!--
+        <div class="tab-content">
+            <div id="results" class="container-fluid tab-pane active"><br>
+                <app-results-page></app-results-page>
+            </div>
+            <div id="favorites" class="container-fluid tab-pane fade"><br>
+                <app-favorites-page></app-favorites-page>
+            </div>
+        </div>
+    -->
+    
