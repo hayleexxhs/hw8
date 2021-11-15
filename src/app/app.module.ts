@@ -10,6 +10,7 @@ import { FavoritesPageComponent } from './favorites-page/favorites-page.componen
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ResultsErrorComponent } from './results-error/results-error.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     ResultsPageComponent,
     WeatherListComponent,
     FavoritesPageComponent,
-    WeatherDetailComponent
+    WeatherDetailComponent,
+    ResultsErrorComponent
   ],
   imports: [
     BrowserModule,

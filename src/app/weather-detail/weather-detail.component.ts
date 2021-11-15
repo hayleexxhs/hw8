@@ -16,9 +16,10 @@ export class WeatherDetailComponent implements OnInit {
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit(): void {
+    console.log("wdetail-oninit");
     this.c_weather = this.weatherService.weather_c;
     this.weather = this.weatherService.weather_15[0];
-    this.initMap();
+    this.initMap();    
   }
 
   initMap(): void {

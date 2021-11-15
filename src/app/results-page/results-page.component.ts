@@ -14,6 +14,7 @@ export class ResultsPageComponent implements OnInit {
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {    
+    console.log("rstpage-oninit");
     this.location = this.weatherService.weather_c.location;
   }
 

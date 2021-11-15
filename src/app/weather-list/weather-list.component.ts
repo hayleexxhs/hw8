@@ -20,17 +20,9 @@ export class WeatherListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.getWeatherData();
-    this.getWeatherData();
-  }
-
-  getWeatherData(): void {
-    //this.weathers = this.weatherService.getWeathers();
-    //this.weatherService.getWeathers().subscribe(weathers => this.weathers = weathers);    
+    console.log("wlist-oninit");
     this.weather_15 = this.weatherService.weather_15;
-    console.log(this.weather_15);
     this.weather_c = this.weatherService.weather_c;
-    console.log(this.weather_c);
-  }
+  }  
 
 }
