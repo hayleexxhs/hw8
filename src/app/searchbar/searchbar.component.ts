@@ -29,8 +29,8 @@ export class SearchbarComponent implements OnInit {
   private favorites_tab: any;
   private searchBtn: any;
 
-  //private url:string = 'http://localhost:8081/search/';
-  private url: string = 'https://csci571hw8-57108.wl.r.appspot.com/search/';
+  private url: string = 'http://localhost:8081/search/';
+  // private url: string = 'https://csci571hw8-57108.wl.r.appspot.com/search/';
 
   autocheck: boolean = false;
 

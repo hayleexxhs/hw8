@@ -57,8 +57,16 @@ export class WeatherService {
       var lng = ipData['loc'].split(',')[1].toString();
       var city = ipData['city'].replace(/ /g, '%20');
       var state = ipData['region'].replace(/ /g, '%20');
-      var newUrl = 'https://csci571hw8-57108.wl.r.appspot.com/search/?autodetect=true&lat=' + lat +'&lng=' + lng + '&city=' + city + '&state=' + state;
-      //var newUrl = 'http://localhost:8081/search/?autodetect=true&lat=' + lat +'&lng=' + lng + '&city=' + city + '&state=' + state;
+      // var newUrl = 'https://csci571hw8-57108.wl.r.appspot.com/search/?autodetect=true&lat=' + lat +'&lng=' + lng + '&city=' + city + '&state=' + state;
+      var newUrl =
+        'http://localhost:8081/search/?autodetect=true&lat=' +
+        lat +
+        '&lng=' +
+        lng +
+        '&city=' +
+        city +
+        '&state=' +
+        state;
       console.log(newUrl);
       this.weather_data = await this.http.get(newUrl).toPromise();
       console.log(this.weather_data);
@@ -82,7 +90,7 @@ export class WeatherService {
       w.date=data[1][i]['time'];
       w.datetime=data[1][i]['date'];
       w.status=data[1][i]['weatherCode'];
-      w.statusimg=data[1][i]['icon_url'];
+      w.statusimg = data[1][i]['icon'];
       w.temphigh=data[1][i]['temperatureMax'];
       w.templow=data[1][i]['temperatureMin'];
       w.windspeed=data[1][i]['windSpeed'];
