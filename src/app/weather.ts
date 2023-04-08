@@ -20,4 +20,12 @@ export interface CurrentWeather {
     windspeed?: number;
     visibility?: number;
     cloudcover?: number;
+    isliked?: boolean;
+}
+
+export interface FavoritesLoc {
+    city?: string;
+    state?: string;
+    c_weather?: CurrentWeather;
+    weather?: Weather;
 }

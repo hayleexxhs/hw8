@@ -43,6 +43,36 @@ export class WeatherService {
     */
   }
 
+  async getWeatherByAutoDetect(): Promise<any> {
+    var url:string = 'https://ipinfo.io/?token=8154647fc6c0d6';
+    /*
+    this.http.get(url).subscribe((response) => {
+      console.log(response);
+    })
+    */
+    try{
+      var ipData: any = await this.http.get(url).toPromise();
+      console.log(ipData);
+      var lat = ipData['loc'].split(',')[0].toString();
+      var lng = ipData['loc'].split(',')[1].toString();
+      var city = ipData['city'].replace(/ /g, '%20');
+      var state = ipData['region'].replace(/ /g, '%20');
+      var newUrl = 'https://csci571hw8-57108.wl.r.appspot.com/search/?autodetect=true&lat=' + lat +'&lng=' + lng + '&city=' + city + '&state=' + state;
+      //var newUrl = 'http://localhost:8081/search/?autodetect=true&lat=' + lat +'&lng=' + lng + '&city=' + city + '&state=' + state;
+      console.log(newUrl);
+      this.weather_data = await this.http.get(newUrl).toPromise();
+      console.log(this.weather_data);
+      this.getOneDayWeather();
+      this.getCurrentWeather();
+      return true;
+    }catch(error){
+      console.log('Error!', error);
+      return false;
+    }
+    
+  }
+
+
   getOneDayWeather(): void {
     var data = [];
     //data = JSON.parse(this.weather_data);
@@ -75,6 +105,15 @@ export class WeatherService {
     this.weather_c.windspeed = data[0]['windSpeed'];
     this.weather_c.visibility = data[0]['visibility'];
     this.weather_c.cloudcover = data[0]['cloudCover'];
+    this.weather_c.isliked = false;
+  }
+
+  likedLocation(): void {
+    this.weather_c.isliked = true;
+  }
+
+  unlikedLocation(): void {
+    this.weather_c.isliked = false;
   }
 
   clearData(): void {

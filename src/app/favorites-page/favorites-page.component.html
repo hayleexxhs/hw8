@@ -1,5 +1,26 @@
-<div class="container-fluid pt-3 pb-3">
+<div class="container-fluid pt-3 pb-3" *ngIf="nodata">
     <div class="card" style="background-color: #fff4ce; color: #a66b20;">
         <div class="p-3 pl-4"><span class="font-weight-bold">Sorry!</span> No records found.</div>
     </div>    
+</div>
+
+<div class="container-fluid pt-3 pb-3" *ngIf="!nodata">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>City</th>
+                <th>State</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fav of favorites; let id = index">
+                <td class="font-weight-bold">{{id+1}}</td>
+                <td><a routerLink="/favoritedetail/{{id}}">{{fav.city}}</a></td>
+                <td><a routerLink="/favoritedetail/{{id}}">{{fav.state}}</a></td>
+                <td><i class="bi bi-trash-fill" (click)="deleteFavorite(id)"></i></td>
+            </tr>
+        </tbody>
+    </table>
 </div>

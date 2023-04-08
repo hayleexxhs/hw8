@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../weather.service';
 import { CurrentWeather, Weather } from '../weather';
-import { google } from 'google-maps';
+//import { google } from 'google-maps';
 
 @Component({
   selector: 'app-weather-detail',
@@ -19,7 +19,7 @@ export class WeatherDetailComponent implements OnInit {
     console.log("wdetail-oninit");
     this.c_weather = this.weatherService.weather_c;
     this.weather = this.weatherService.weather_15[0];
-    this.initMap();    
+    this.initMap();
   }
 
   initMap(): void {

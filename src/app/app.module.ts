@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
@@ -11,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ResultsErrorComponent } from './results-error/results-error.component';
+import { FavoratesDetailComponent } from './favorates-detail/favorates-detail.component';
+import { ChartComponent } from './chart/chart.component';
+
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -20,12 +25,16 @@ import { ResultsErrorComponent } from './results-error/results-error.component';
     WeatherListComponent,
     FavoritesPageComponent,
     WeatherDetailComponent,
-    ResultsErrorComponent
+    ResultsErrorComponent,
+    FavoratesDetailComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

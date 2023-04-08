@@ -4,14 +4,16 @@ import { ResultsPageComponent } from './results-page/results-page.component';
 import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
 import { ResultsErrorComponent } from './results-error/results-error.component';
-import { Router, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { FavoratesDetailComponent } from './favorates-detail/favorates-detail.component';
 
 
 const routes: Routes = [
-  {path: 'results', component: ResultsPageComponent},
-  {path: 'detail', component: WeatherDetailComponent},
+  {path: 'results', component: ResultsPageComponent, data:{animation:'ResultsPage'}},
+  {path: 'detail', component: WeatherDetailComponent, data:{animation:'DetailPage'}},
   {path: 'favorites', component: FavoritesPageComponent},
-  {path: 'error', component: ResultsErrorComponent}
+  {path: 'error', component: ResultsErrorComponent},
+  {path: 'favoritedetail/:id', component: FavoratesDetailComponent}
 ]
 
 
