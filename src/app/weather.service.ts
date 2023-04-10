@@ -58,8 +58,17 @@ export class WeatherService {
       var city = ipData['city'].replace(/ /g, '%20');
       var state = ipData['region'].replace(/ /g, '%20');
       // var newUrl = 'https://csci571hw8-57108.wl.r.appspot.com/search/?autodetect=true&lat=' + lat +'&lng=' + lng + '&city=' + city + '&state=' + state;
+      // var newUrl =
+      //   'http://localhost:8081/search/?autodetect=true&lat=' +
+      //   lat +
+      //   '&lng=' +
+      //   lng +
+      //   '&city=' +
+      //   city +
+      //   '&state=' +
+      //   state;
       var newUrl =
-        'http://localhost:8081/search/?autodetect=true&lat=' +
+        '/search/?autodetect=true&lat=' +
         lat +
         '&lng=' +
         lng +

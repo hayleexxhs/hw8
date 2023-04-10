@@ -29,7 +29,8 @@ export class SearchbarComponent implements OnInit {
   private favorites_tab: any;
   private searchBtn: any;
 
-  private url: string = 'http://localhost:8081/search/';
+  private url: string = '/search/';
+  // private url: string = 'http://localhost:8081/search/';
   // private url: string = 'https://csci571hw8-57108.wl.r.appspot.com/search/';
 
   autocheck: boolean = false;
@@ -101,7 +102,8 @@ export class SearchbarComponent implements OnInit {
     this.form_city.disabled = false;
     this.form_state.disabled = false;
     this.router.navigate(['/']);
-    this.url = 'http://localhost:8081/search/';
+    this.url = '/search/';
+    // this.url = 'http://localhost:8081/search/';
     // this.url = 'https://csci571hw8-57108.wl.r.appspot.com/search/';
     this.autocheck = false;
     this.progressing = false;
